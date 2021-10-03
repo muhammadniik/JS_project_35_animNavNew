@@ -1,0 +1,114 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+@font-face {
+    font-family: 'Vazer';
+    src: url('../fonts/vazir-Black.eot');
+    src: url('../fonts/vazir.ttf') format('truetype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff');
+}
+
+body {
+    font-family: 'Vazer';
+    direction: rtl;
+}
+
+.mian {
+    background-color: rgb(56, 56, 56);
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0% auto;
+}
+
+.mian header {
+    /* background-color: rgb(87, 87, 87); */
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.mian header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    right: 0px;
+    width: 0px;
+    opacity: 0;
+    overflow: hidden;
+    box-shadow: -10px 10px 8px 8px rgba(122, 118, 118, 0.5);
+    transition: width 0.3s, opacity 0.3s, right 0.3s;
+    -webkit-transition: width 0.3s, opacity 0.3s, right 0.3s;
+    -moz-transition: width 0.3s, opacity 0.3s, right 0.3s;
+    -ms-transition: width 0.3s, opacity 0.3s, right 0.3s;
+    -o-transition: width 0.3s, opacity 0.3s, right 0.3s;
+}
+
+.mian header ul.active {
+    right: 70px;
+    opacity: 1;
+    width: 300px;
+}
+
+.mian header ul li {
+    padding: 5px 10px;
+    margin: 0% 5px;
+    cursor: pointer;
+}
+
+.mian header ul li:hover {
+    background-color: rgb(42, 42, 42);
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../image/close.png");
+    transform: rotateZ(360deg);
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+}
+
+.close.active {
+    transform: rotateZ(0deg);
+    background-image: url("../image/ham.png");
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+}
+
+.close:hover {
+    background-color: rgb(42, 42, 42);
+}
